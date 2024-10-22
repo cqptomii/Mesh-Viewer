@@ -12,5 +12,8 @@ add_executable(Mesh_Viewer src/main.cpp
         header/stb_image.h
         header/Window.hpp
         src/Window.cpp
-        src/Camera.hpp)
+        src/Camera.hpp
+        src/Camera.cpp
+        src/Scene.hpp
+        src/Mesh.hpp)
 target_link_libraries(Mesh_Viewer glfw3)

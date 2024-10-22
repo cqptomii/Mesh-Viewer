@@ -8,12 +8,6 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-enum mov_type{
-    FORWARD,
-    BACKWARD,
-    LEFT,
-    RIGTH
-};
 class Camera {
 private:
 glm::vec3 cam_origin;
@@ -21,16 +15,23 @@ glm::vec3 cam_direction;
 glm::vec3 v_up;
 glm::vec3 axis_up;
 glm::vec3 axis_rigth;
-double fov;
-double cam_yaw,cam_pitch;
-double mouse_sensitivity;
-double cam_speed;
-bool cam_first_move = false;
+float fov; // For the perspective projection
+float cam_yaw,cam_pitch;
+float mouse_sensitivity;
+float cam_speed;
+bool cam_first_move;
+
+float z_near;
+float z_far;
+float aspect_ratio;
+
+    void load_cam_parameter();
 public:
     Camera();
     Camera(glm::vec3 origin,glm::vec3 direction);
     glm::mat4 get_view_matrix();
-    void process_cam_movement(mov_type direction,float delta_time);
+    glm::mat4 get_projection_matrix() const;
+    void process_cam_movement(unsigned int direction,float delta_time);
     void process_mouse_movement(float xOffset, float yOffset);
     void process_mouse_scroll(float xOffset, float yOffset);
 };
