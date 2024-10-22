@@ -16,5 +16,4 @@ public:
     void onDraw();
 };
 
-
 #endif //MESH_VIEWER_SCENE_HPP
