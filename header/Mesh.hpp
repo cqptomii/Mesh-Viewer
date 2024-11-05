@@ -5,12 +5,17 @@
 #ifndef MESH_VIEWER_MESH_HPP
 #define MESH_VIEWER_MESH_HPP
 
+#include <vector>
+#include "HalfEdge.h"
 
 class Mesh {
 private:
-
+    std::vector<Vertex> mesh_vertex;
+    std::vector<HalfEdge> mesh_half_edge;
+    std::vector<MeshTriangle> mesh_triangle;
 public:
     Mesh();
+    Vertex addVertex();
     void onDraw();
 };
 

@@ -2,7 +2,7 @@
 // Created by tomfr on 22/10/2024.
 //
 
-#include "Shader.hpp"
+#include "../header/Shader.hpp"
 
 Shader::Shader() : shader_id(0), vertex_shader_source(),fragment_shader_source(){}
 Shader::Shader(const char* vertex_path, const char* fragment_path) : shader_id(),vertex_shader_source(),fragment_shader_source()  {

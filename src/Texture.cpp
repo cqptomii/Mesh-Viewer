@@ -2,7 +2,7 @@
 // Created by tomfr on 22/10/2024.
 //
 
-#include "Texture.hpp"
+#include "../header/Texture.hpp"
 Texture::Texture() : t_id(),t_path(),wrap_param_s(GL_LINEAR),wrap_param_t(GL_LINEAR),min_filter(GL_LINEAR),mag_filter(GL_LINEAR) {}
 
 Texture::Texture(const char *texture_path) :t_id(), t_path(texture_path),wrap_param_s(GL_LINEAR),wrap_param_t(GL_LINEAR),min_filter(GL_LINEAR),mag_filter(GL_LINEAR) {

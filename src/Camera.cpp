@@ -2,7 +2,7 @@
 // Created by tomfr on 21/10/2024.
 //
 
-#include "Camera.hpp"
+#include "../header/Camera.hpp"
 
 Camera::Camera() : cam_origin(glm::vec3(0.0f,0.0f,0.0f)), cam_direction(glm::vec3(0.0f,0.0f,-1.0f)),v_up(glm::vec3(0.0f,1.0f,0.0f)), axis_up(),axis_rigth(),fov(45.0f),cam_yaw(-90.0f),cam_pitch(0.0f),mouse_sensitivity(0.5f),cam_speed(2.5f),cam_first_move(true),z_near(0.1f),z_far(100.0f),aspect_ratio(16/9) {
     load_cam_parameter();
