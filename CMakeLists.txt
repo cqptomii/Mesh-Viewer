@@ -11,9 +11,20 @@ add_executable(Mesh_Viewer src/main.cpp
         src/glad.c
         header/stb_image.h
         header/Window.hpp
-        src/Window.cpp
-        src/Camera.hpp
+        header/Camera.hpp
+        header/Scene.hpp
+        header/Mesh.hpp
+        header/Material.hpp
+        header/Texture.hpp
         src/Camera.cpp
-        src/Scene.hpp
-        src/Mesh.hpp)
+        src/Window.cpp
+        src/Shader.cpp
+        src/Texture.cpp
+        src/Mesh.cpp
+        header/HalfEdge.h
+        src/HalfEdge.cpp
+        header/Vertex.h
+        header/MeshTriangle.h
+        src/MeshTriangle.cpp
+        src/Vertex.cpp)
 target_link_libraries(Mesh_Viewer glfw3)
