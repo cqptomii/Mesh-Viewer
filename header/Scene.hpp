@@ -4,7 +4,7 @@
 
 #ifndef MESH_VIEWER_SCENE_HPP
 #define MESH_VIEWER_SCENE_HPP
-#include "Mesh.hpp"
+#include "Mesh/Mesh.hpp"
 #include <iostream>
 #include <vector>
 

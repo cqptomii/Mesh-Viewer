@@ -1,13 +1,14 @@
 #ifndef MESHTRIANGLE_HPP
 #define MESHTRIANGLE_HPP
-
+#include "Mesh.hpp"
 class HalfEdge;
 
 class MeshTriangle {
 private:
+    Mesh* t_mesh;
 	HalfEdge* t_start;
 public:
-	MeshTriangle();
+	 MeshTriangle(Mesh* mesh);
 	MeshTriangle(HalfEdge& start);
 	MeshTriangle(const MeshTriangle& m);
 	virtual ~MeshTriangle();
